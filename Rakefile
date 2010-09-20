@@ -13,7 +13,7 @@ begin
     gem.add_dependency 'rails', '~> 3.0.0'
     gem.add_dependency 'hoptoad_notifier', '~> 2.3.7'
     gem.add_dependency 'newrelic_rpm', '~> 2.13.1'
-    gem.add_dependency 'tripwire_notifier', '~> 0.2.2'
+    # gem.add_dependency 'tripwire_notifier', '~> 0.2.2'
     gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*", 'gemspec', 'VERSION']
 
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"

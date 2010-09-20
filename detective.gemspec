@@ -43,20 +43,17 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<rails>, ["~> 3.0.0"])
       s.add_runtime_dependency(%q<hoptoad_notifier>, ["~> 2.3.7"])
       s.add_runtime_dependency(%q<newrelic_rpm>, ["~> 2.13.1"])
-      s.add_runtime_dependency(%q<tripwire_notifier>, ["~> 0.2.2"])
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     else
       s.add_dependency(%q<rails>, ["~> 3.0.0"])
       s.add_dependency(%q<hoptoad_notifier>, ["~> 2.3.7"])
       s.add_dependency(%q<newrelic_rpm>, ["~> 2.13.1"])
-      s.add_dependency(%q<tripwire_notifier>, ["~> 0.2.2"])
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     end
   else
     s.add_dependency(%q<rails>, ["~> 3.0.0"])
     s.add_dependency(%q<hoptoad_notifier>, ["~> 2.3.7"])
     s.add_dependency(%q<newrelic_rpm>, ["~> 2.13.1"])
-    s.add_dependency(%q<tripwire_notifier>, ["~> 0.2.2"])
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
   end
 end

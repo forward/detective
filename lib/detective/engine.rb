@@ -1,7 +1,7 @@
 require 'rails'
 require 'hoptoad_notifier'
 require 'newrelic_rpm'
-require 'tripwire_notifier'
+# require 'tripwire_notifier'
 
 module Detective
   class Engine < Rails::Engine
