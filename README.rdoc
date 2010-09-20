@@ -1,6 +1,6 @@
-= detective
+= Detective
 
-Description goes here.
+All in one hoptoad, newrelic and tripwire notifcations for rails apps
 
 == Note on Patches/Pull Requests
  
