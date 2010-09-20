@@ -7,7 +7,7 @@ tripwire:
   api_key: '<%= tripwire_key %>'
 
 newrelic_rpm:
-  enabled: true
+  enabled: <%= newrelic_key.present? ? 'true' : 'false' %>
 
 monitoring:
   enabled: true
