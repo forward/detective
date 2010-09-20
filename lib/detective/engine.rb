@@ -5,7 +5,7 @@ require 'tripwire_notifier'
 
 module Detective
   class Engine < Rails::Engine
-    inializer 'detective.load', :after => :load_config_initializers do |app|
+    initializer 'detective.load', :after => :load_config_initializers do |app|
 
       # Hoptopad
       HoptoadNotifier.configure do |config|
