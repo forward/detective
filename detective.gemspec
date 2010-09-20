@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "VERSION",
+     "app/controllers/monitoring_controller.rb",
+     "config/routes.rb",
      "lib/detective.rb",
      "lib/detective/engine.rb"
   ]

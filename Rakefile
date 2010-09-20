@@ -14,7 +14,7 @@ begin
     gem.add_dependency 'hoptoad_notifier', '~> 2.3.7'
     gem.add_dependency 'newrelic_rpm', '~> 2.13.1'
     gem.add_dependency 'tripwire_notifier', '~> 0.2.2'
-    gem.files = Dir["{lib}/**/*", 'gemspec', 'VERSION']
+    gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*", 'gemspec', 'VERSION']
 
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
