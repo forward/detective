@@ -5,11 +5,15 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "detective"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Keeps an eye on your app}
+    gem.description = %Q{All in one hoptoad, newrelic and tripwire notifcations for rails apps}
     gem.email = "andrewnez@gmail.com"
-    gem.homepage = "http://github.com/andrew/detective"
+    gem.homepage = "http://github.com/forward/detective"
     gem.authors = ["Andrew Nesbitt"]
+    gem.add_dependency 'hoptoad_notifier'
+    gem.add_dependency 'newrelic_rpm'
+    gem.add_dependency 'tripwire_notifier'
+
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
