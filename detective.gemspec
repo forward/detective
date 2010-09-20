@@ -21,7 +21,9 @@ Gem::Specification.new do |s|
      "app/controllers/monitoring_controller.rb",
      "config/routes.rb",
      "lib/detective.rb",
-     "lib/detective/engine.rb"
+     "lib/detective/engine.rb",
+     "lib/generators/detective/detective_generator.rb",
+     "lib/generators/detective/templates/config.rb"
   ]
   s.homepage = %q{http://github.com/forward/detective}
   s.rdoc_options = ["--charset=UTF-8"]
