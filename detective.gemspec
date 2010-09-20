@@ -17,15 +17,9 @@ Gem::Specification.new do |s|
      "README.rdoc"
   ]
   s.files = [
-    ".document",
-     ".gitignore",
-     "LICENSE",
-     "README.rdoc",
-     "Rakefile",
-     "VERSION",
+    "VERSION",
      "lib/detective.rb",
-     "test/helper.rb",
-     "test/test_detective.rb"
+     "lib/detective/engine.rb"
   ]
   s.homepage = %q{http://github.com/forward/detective}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -42,20 +36,23 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<hoptoad_notifier>, [">= 0"])
-      s.add_runtime_dependency(%q<newrelic_rpm>, [">= 0"])
-      s.add_runtime_dependency(%q<tripwire_notifier>, [">= 0"])
+      s.add_runtime_dependency(%q<rails>, ["~> 3.0.0"])
+      s.add_runtime_dependency(%q<hoptoad_notifier>, ["~> 2.3.7"])
+      s.add_runtime_dependency(%q<newrelic_rpm>, ["~> 2.13.1"])
+      s.add_runtime_dependency(%q<tripwire_notifier>, ["~> 0.2.2"])
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     else
-      s.add_dependency(%q<hoptoad_notifier>, [">= 0"])
-      s.add_dependency(%q<newrelic_rpm>, [">= 0"])
-      s.add_dependency(%q<tripwire_notifier>, [">= 0"])
+      s.add_dependency(%q<rails>, ["~> 3.0.0"])
+      s.add_dependency(%q<hoptoad_notifier>, ["~> 2.3.7"])
+      s.add_dependency(%q<newrelic_rpm>, ["~> 2.13.1"])
+      s.add_dependency(%q<tripwire_notifier>, ["~> 0.2.2"])
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     end
   else
-    s.add_dependency(%q<hoptoad_notifier>, [">= 0"])
-    s.add_dependency(%q<newrelic_rpm>, [">= 0"])
-    s.add_dependency(%q<tripwire_notifier>, [">= 0"])
+    s.add_dependency(%q<rails>, ["~> 3.0.0"])
+    s.add_dependency(%q<hoptoad_notifier>, ["~> 2.3.7"])
+    s.add_dependency(%q<newrelic_rpm>, ["~> 2.13.1"])
+    s.add_dependency(%q<tripwire_notifier>, ["~> 0.2.2"])
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
   end
 end

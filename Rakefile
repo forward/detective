@@ -10,9 +10,11 @@ begin
     gem.email = "andrewnez@gmail.com"
     gem.homepage = "http://github.com/forward/detective"
     gem.authors = ["Andrew Nesbitt"]
-    gem.add_dependency 'hoptoad_notifier'
-    gem.add_dependency 'newrelic_rpm'
-    gem.add_dependency 'tripwire_notifier'
+    gem.add_dependency 'rails', '~> 3.0.0'
+    gem.add_dependency 'hoptoad_notifier', '~> 2.3.7'
+    gem.add_dependency 'newrelic_rpm', '~> 2.13.1'
+    gem.add_dependency 'tripwire_notifier', '~> 0.2.2'
+    gem.files = Dir["{lib}/**/*", 'gemspec', 'VERSION']
 
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
