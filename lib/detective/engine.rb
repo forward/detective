@@ -13,20 +13,22 @@ module Detective
         puts 'No config detected, install with: rails g detective'
       end
 
-      # Hoptopad
-      if Detective::Engine::CONFIG[:hoptoad][:enabled]
-        HoptoadNotifier.configure do |config|
-          config.api_key = Detective::Engine::CONFIG[:hoptoad][:api_key]
-          config.logger = nil
-          config.js_notifier = true
-          config.secure = true
+      if defined? Detective::Engine::CONFIG
+        # Hoptopad
+        if Detective::Engine::CONFIG[:hoptoad][:enabled]
+          HoptoadNotifier.configure do |config|
+            config.api_key = Detective::Engine::CONFIG[:hoptoad][:api_key]
+            config.logger = nil
+            config.js_notifier = true
+            config.secure = true
+          end
         end
-      end
 
-      # Tripwire
-      if Detective::Engine::CONFIG[:tripwire][:enabled]
-        TripwireNotifier.configure do |config|
-          config.api_key = Detective::Engine::CONFIG[:tripwire][:api_key]
+        # Tripwire
+        if Detective::Engine::CONFIG[:tripwire][:enabled]
+          TripwireNotifier.configure do |config|
+            config.api_key = Detective::Engine::CONFIG[:tripwire][:api_key]
+          end
         end
       end
     end
