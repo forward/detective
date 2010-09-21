@@ -1,7 +1,6 @@
 require 'rails'
 require 'hoptoad_notifier'
 require 'newrelic_rpm'
-# require 'tripwire_notifier'
 
 module Detective
   class Engine < Rails::Engine
@@ -26,8 +25,10 @@ module Detective
 
         # Tripwire
         if Detective::Engine::CONFIG[:tripwire][:enabled]
+          require 'tripwire_notifier'
           TripwireNotifier.configure do |config|
             config.api_key = Detective::Engine::CONFIG[:tripwire][:api_key]
+            config.monitored_environments << 'development'
           end
         end
       end
