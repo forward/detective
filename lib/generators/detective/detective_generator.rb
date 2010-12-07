@@ -10,7 +10,11 @@ class DetectiveGenerator < Rails::Generators::Base
   def generate_config
     template 'config.rb', 'config/detective.yml'
     if newrelic_key.present?
-      NewRelic::Command::Install.new(:quiet => true, :app_name => Rails.application.class.parent, :license_key => newrelic_key).run
+      begin
+        NewRelic::Command::Install.new(:quiet => true, :app_name => Rails.application.class.parent, :license_key => newrelic_key).run
+      rescue NewRelic::Command::CommandFailure
+        puts 'newrelic.yml file already exists'
+      end
     end
   end
 end
