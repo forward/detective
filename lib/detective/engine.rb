@@ -18,7 +18,6 @@ module Detective
           HoptoadNotifier.configure do |config|
             config.api_key = Detective::Engine::CONFIG[:hoptoad][:api_key]
             config.logger = nil
-            config.js_notifier = false
             config.secure = true
           end
         end
