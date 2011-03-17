@@ -12,7 +12,7 @@ begin
     gem.authors = ["Andrew Nesbitt"]
     gem.add_dependency 'rails', '~> 3.0.0'
     gem.add_dependency 'hoptoad_notifier', '~> 2.4.0'
-    gem.add_dependency 'newrelic_rpm', '~> 2.13.4'
+    gem.add_dependency 'newrelic_rpm', '2.13.4'
     gem.add_dependency 'tripwire_notifier', '~> 0.2.3'
     gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*", 'gemspec', 'VERSION']
 
