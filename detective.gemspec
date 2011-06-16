@@ -14,4 +14,9 @@ Gem::Specification.new do |gem|
   gem.name          = "detective"
   gem.require_paths = ['lib']
   gem.version       = Detective::VERSION
+
+  s.add_runtime_dependency(%q<rails>, ["~> 3.0.8"])
+  s.add_runtime_dependency(%q<hoptoad_notifier>, ["~> 2.4.11"])
+  s.add_runtime_dependency(%q<newrelic_rpm>, ["~> 3.1.0"])
+  s.add_runtime_dependency(%q<tripwire_notifier>, ["~> 0.2.10"])
 end
